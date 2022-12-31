@@ -1,0 +1,47 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "body": [
+        {
+            "type": "Input.ChoiceSet",
+            "choices": [
+                {
+                    "title": "prod",
+                    "value": "prod"
+                },
+                {
+                    "title": "stage",
+                    "value": "stage"
+                }
+            ],
+            "id": "env",
+            "label": "Please select the environment",
+            "value": "stage"
+        },
+        {
+            "type": "Input.Text",
+            "placeholder": "Please paste you X12 here",
+            "isMultiline": true,
+            "label": "Please enter the X12 request beow",
+            "id": "x12Data"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Execute",
+                    "title": "submit",
+                    "id": "submit",
+                    "verb": "eligibilityTriggerVerb",
+                    "data": {
+                        "msteams": {
+                            "type": "imBack",
+                            "value": "clicked the submit button"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

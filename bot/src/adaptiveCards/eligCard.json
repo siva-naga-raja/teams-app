@@ -1,0 +1,65 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "body": [
+        {
+            "type": "Input.Text",
+            "placeholder": "enter text",
+            "id": "inputText",
+            "label": "please enter input text"
+        },
+        {
+            "type": "Input.Date",
+            "id": "inputDate",
+            "label": "please enter input date"
+        },
+        {
+            "type": "Input.Time",
+            "label": "please enter input time",
+            "id": "inputTime",
+            "value": "12:00"
+        },
+        {
+            "type": "Input.Number",
+            "id": "inputNumber",
+            "label": "please enter input number",
+            "placeholder": "please enter input number"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "choices": [
+                {
+                    "title": "stage",
+                    "value": "stage"
+                },
+                {
+                    "title": "prod",
+                    "value": "prod"
+                }
+            ],
+            "placeholder": "Placeholder text",
+            "id": "inputChoiceset",
+            "label": "please select an option from the choice set",
+            "value": "stage"
+        },
+        {
+            "type": "Input.Toggle",
+            "title": "good",
+            "id": "inputToggle",
+            "label": "please select the input toggle",
+            "value": "false"
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.Execute",
+                    "title": "submit",
+                    "id": "submit",
+                    "verb": "eligSubmit"
+                }
+            ]
+        }
+    ]
+}
